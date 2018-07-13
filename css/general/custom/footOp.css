@@ -1,5 +1,5 @@
 .back-to {
-	width: 90px;
+	width: 95px;
 	height: 30px;
 	bottom: 0px;
 	display: block;
@@ -29,6 +29,7 @@
 	color: #000000;
 	position: relative;
 	top: 2px;
+	right: 3px;
 }
 @media (min-width: 1201px) {
 	.back-to {
