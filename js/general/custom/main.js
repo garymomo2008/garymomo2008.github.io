@@ -63,4 +63,8 @@
 			$("." + target + ":not(.item-disable)").show();
 		}
 	});
+
+	$("#unwork-back a").on("click tap", function() {
+		location.replace("https://ppt.cc/fQuGdx");
+	});
 });
