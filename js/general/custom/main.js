@@ -68,3 +68,7 @@
 		location.replace("https://ppt.cc/fQuGdx");
 	});
 });
+
+$(window).on("load", function() {
+	$(".loader").hide();
+});
