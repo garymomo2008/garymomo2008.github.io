@@ -65,7 +65,7 @@
 	});
 
 	$("#unwork-back a").on("click tap", function() {
-		location.replace("https://ppt.cc/fQuGdx");
+		location.replace("https://garymomoindex.github.io/?visit=true");
 	});
 });
 
