@@ -1,187 +1,748 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="google" content="notranslate" />
-	<link rel="shortcut icon" href="image/icon/favicon.ico" type="image/vnd.microsoft.icon" />
-	<link rel="icon" href="image/icon/favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="bookmark" href="image/icon/favicon.ico" type="image/vnd.microsoft.icon" />
-	<title>桃色幸運草Z：2008 -破土萌芽-</title>
-	<meta name="author" content="台灣武士 Gary Hsu">
-	<meta name="description" content="桃色幸運草Z">
-	<meta name="keywords" content="桃色幸運草Z,桃色幸運草,桃色四葉草Z,桃色四葉草,桃色幸福草Z,桃色幸福草,桃草Z,桃草,台灣桃草武士,桃草武士,武士,武士團,台灣桃草武士團,桃草武士團">
-	<meta property="og:site_name" content="桃色幸運草Z" />
-	<meta property="og:title" content="桃色幸運草Z：2008 -破土萌芽-" />
-	<meta property="og:type" content="website" />
-	<meta property="og:description" content="桃色幸運草Z" />
-	<meta property="og:url" content="https://garymomo2008.github.io/" />
-	<!-- <meta property="og:image" content="" /> -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="google" content="notranslate" />
+  <link rel="shortcut icon" href="image/icon/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="icon" href="image/icon/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="bookmark" href="image/icon/favicon.ico" type="image/vnd.microsoft.icon" />
+  <title>桃色幸運草Z：穿越 -2008剪影-</title>
+  <meta name="author" content="台灣武士 Gary Hsu" />
+  <meta name="description" content="桃色幸運草Z" />
+  <meta name="keywords" content="桃色幸運草Z,桃色幸運草,桃色四葉草Z,桃色四葉草,桃色幸福草Z,桃色幸福草,桃草Z,桃草,台灣桃草武士,桃草武士,武士,武士團,台灣桃草武士團,桃草武士團,ももいろクローバーZ,ももクロ,ももいろクローバー" />
+  <meta property="og:site_name" content="桃色幸運草Z" />
+  <meta property="og:title" content="桃色幸運草Z：穿越 -2008剪影-" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="桃色幸運草Z" />
+  <meta property="og:url" content="https://garymomo2008.github.io/" />
+  <!-- <meta property="og:image" content="" /> -->
 
-	<script src="js/general/custom/head.js"></script>
-	<script src="js/general/custom/main.js"></script>
-	<script src="js/general/custom/footOp.js"></script>
+  <script src="js/general/custom/head.js"></script>
+  <script src="js/general/custom/main.js"></script>
+  <script>
+	$(document).ready(function() {
+		$('#filter1').val('');
+		$('#filter2').val('');
+		var dtable = $('#cus-table').DataTable({
+			"autoWidth": false,
+			"dom": "lfriptip",
+			"lengthMenu": [ 10, 30, 60 ],
+			"pageLength": 30,
+			"order": [[ 1, "desc" ]],
+			"columnDefs": [
+				{ "targets": [2, 3], "orderable": false }
+			],
+			"columns": [
+				{ "width": "5%" },
+				{ "width": "5%" },
+				{ "width": "80%" },
+				{ "width": "10%" }
+			],
+			"language": {
+				"lengthMenu": "一次顯示 _MENU_ 筆數",
+				"zeroRecords": "本次查詢查無相關資料",
+				"info": "當前為第 _PAGE_ 頁，最多 _PAGES_ 頁",
+				"infoEmpty": "查無相關資料",
+				"infoFiltered": "",
+				"search": "本次查詢：",
+				"paginate": {
+					"next": "下頁",
+					"previous": "前頁"
+				}
+			}
+		});
+		$('#filter1').on('change', function() {
+			var fv1 = $(this).val();
+			dtable.column(1).search(fv1).draw();
+		});
+		$('#filter2').on('change', function() {
+			var fv2 = $(this).val();
+			dtable.column(0).search(fv2).draw();
+		});
+	});
+  </script>
 </head>
-<body>
-	<div id="top"></div>
-
-	<script src="js/general/custom/nav.js"></script>
-	<div class="loader"></div>
-	<div class="fullContain">
-		<div class="mainContain">
-			<div class="row">
-				<div class="col-xs-12 tags">
-					<div class="row">
-						<div class="col-xs-4 live tags-item" id="tags-live">
-							<div><span class="glyphicon glyphicon-music"></span></div>
-							<p>找LIVE</p>
-						</div>
-						<div class="col-xs-4 music tags-item" id="tags-music">
-							<div><span class="glyphicon glyphicon-cd"></span></div>
-							<p>找音樂作品</p>
-						</div>
-						<div class="col-xs-4 dvdbd tags-item" id="tags-dvdbd">
-							<div><span class="glyphicon glyphicon-facetime-video"></span></div>
-							<p>找影像作品</p>
-						</div>
-					</div>
-					<br>
-					<div class="row">
-						<div class="col-xs-4 book tags-item" id="tags-book">
-							<div><span class="glyphicon glyphicon-book"></span></div>
-							<p>找書籍雜誌</p>
-						</div>
-						<div class="col-xs-4 tvshow tags-item" id="tags-tvshow">
-							<div><span class="glyphicon glyphicon-sunglasses"></span></div>
-							<p>找電視演出</p>
-						</div>
-						<div class="col-xs-4 radiosign tags-item" id="tags-radiosign">
-							<div><span class="glyphicon glyphicon-signal"></span></div>
-							<p>找廣播演出</p>
-						</div>
-					</div>
-					<br>
-					<div class="row">
-						<div class="col-xs-4 movie tags-item" id="tags-movie">
-							<div><span class="glyphicon glyphicon-film"></span></div>
-							<p>找電影演出</p>
-						</div>
-						<div class="col-xs-4 network tags-item" id="tags-network">
-							<div><span class="glyphicon glyphicon-globe"></span></div>
-							<p>找網路相關</p>
-						</div>
-						<div class="col-xs-4 anime tags-item" id="tags-anime">
-							<div><span class="glyphicon glyphicon-fire"></span></div>
-							<p>找動漫相關</p>
-						</div>
-					</div>
-					<br>
-					<div class="row">
-						<div class="col-xs-4 game tags-item" id="tags-game">
-							<div><span class="glyphicon glyphicon-knight"></span></div>
-							<p>找遊戲相關</p>
-						</div>
-						<div class="col-xs-4 other tags-item" id="tags-other">
-							<div><span class="glyphicon glyphicon-user"></span></div>
-							<p>找其他活動</p>
-						</div>
-						<div class="col-xs-4 all tags-item" id="tags-all">
-							<div><span class="glyphicon glyphicon-eye-open"></span></div>
-							<p>全部列表</p>
-						</div>
-					</div>
-					<br>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-6 actions" id="collapseParent">
-					<div class="datatime colorControl" id="month12">十二月</div>
-					<div class="datatime colorControl" id="month11">十一月</div>
-					<div class="datatime colorControl" id="month10">十月</div>
-					<div class="datatime colorControl" id="month9">九月</div>
-					<div class="datatime colorControl" id="month8">八月</div>
-					<div class="datatime colorControl" id="month7">七月</div>
-					<div class="items it-momoclo-red panel items-member" id="it902">
-						<h1 class="items-head"><b>生日快樂</b></h1>
-						<p class="items-head">日期：7月12日</p>
-						<h3 class="items-head"><b>百田夏菜子</b></h3>
-					</div>
-					<div class="datatime colorControl" id="month6">六月</div>
-					<div class="items it-momoclo-purple panel items-member" id="it900">
-						<h1 class="items-head"><b>生日快樂</b></h1>
-						<p class="items-head">日期：6月21日</p>
-						<h3 class="items-head"><b>高城蕾妮</b></h3>
-					</div>
-					<div class="items it-momoclo-pink panel items-member" id="it898">
-						<h1 class="items-head"><b>生日快樂</b></h1>
-						<p class="items-head">日期：6月11日</p>
-						<h3 class="items-head"><b>佐佐木彩夏</b></h3>
-					</div>
-					<div class="items it-momoclo-yellow panel items-member" id="it896">
-						<h1 class="items-head"><b>生日快樂</b></h1>
-						<p class="items-head">日期：6月4日</p>
-						<h3 class="items-head"><b>玉井詩織</b></h3>
-					</div>
-					<div class="datatime colorControl" id="month5">五月</div>
-					<div class="items it-momoclo-all panel items-member" id="it895">
-						<h1 class="items-head"><b>生日快樂</b></h1>
-						<p class="items-head">日期：5月17日</p>
-						<h3 class="items-head"><b>桃色幸運草</b></h3>
-					</div>
-					<div class="datatime colorControl" id="month4">四月</div>
-					<div class="datatime colorControl" id="month3">三月</div>
-					<div class="items it-momoclo-blue panel items-member" id="it901">
-						<h1 class="items-head"><b>生日快樂</b></h1>
-						<p class="items-head">日期：3月17日</p>
-						<h3 class="items-head"><b>早見朱莉</b></h3>
-					</div>
-					<div class="datatime colorControl" id="month2">二月</div>
-					<div class="datatime colorControl" id="month1">一月</div>
-				</div>
-				<div class="col-xs-5 col-xs-offset-1 actions">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12" id="special-info">
-					<p>
-						<b>
-							部分資料參考來源
-							<a href="http://www.momoclo.net/" target="_blank">『官網』</a>
-							、
-							<a href="http://momoclozamurai.xxxblog.jp" target="_blank">『ももクロ侍』</a>
-							、
-							<a href="http://momoirocloverz.blog.fc2.com/" target="_blank">『ももクロちゃんはじめました。』</a>
-							、『台灣桃草武士團』
-						</b>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="footer-option">
-			<p class="anchor1 back-to"><a href="#top" title="回上層"><b>回上層</b></a></p>
-			<p class="anchor2 back-to">
-				<span class="option-lr glyphicon glyphicon-minus-sign"></span>
-				<span id="datatimeNum">1</span><b>月</b>
-				<span class="option-lr glyphicon glyphicon-plus-sign"></span>
-				<span class="glyphicon glyphicon-search"></span>
-			</p>
-			<p class="anchor3 back-to"><a href="https://garymomoindex.github.io/?visit=true" title="回首頁"><b>回首頁</b></a></p>
-
-			<figure>
-				<img src="image/general/icon/videoGear.png" title="收起">
-			</figure>
-		</div>
-
-		<footer>
-			<div class='momofoot'>
-				&nbsp;
-				<br/>桃色幸運草Z台灣武士製作
-				<br/>建議使用IE11（含）以上或Chrome瀏覽器以達最佳瀏覽效果
-				<br/>本頁圖片來源：<a href="https://natalie.mu/" target="_blank">natalie</a>與網路搜尋
-			</div>
-		</footer>
-	</div>
+<body class="momo-bk-color-black momo-font-family">
+  <script src="js/general/custom/nav.js"></script>
+  <div class="loader"></div>
+  <div class="container-fluid d-flex flex-column min-vh-100">
+    <div class="row justify-content-center mt-5">
+      <div class="col-11 mt-5 text-break">
+        <div class="row momo-filter">
+          <div class="col-12">
+            <label for="filter1">月份：</label>
+            <select id="filter1">
+              <option value="">All</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <label for="filter2" class="ml-3">分類：</label>
+            <select id="filter2">
+              <option value="">All</option>
+              <option value="活動">活動</option>
+              <option value="動畫">動畫</option>
+              <option value="電影">電影</option>
+              <option value="戲劇">戲劇</option>
+              <option value="廣告">廣告</option>
+              <option value="合作">合作</option>
+              <option value="節目">節目</option>
+              <option value="音樂">音樂</option>
+              <option value="遊戲">遊戲</option>
+              <option value="事件">事件</option>
+              <option value="廣播">廣播</option>
+              <option value="書報">書報</option>
+              <option value="影像">影像</option>
+              <option value="網路">網路</option>
+              <option value="交流">交流</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+      <div class="col-11 text-break">
+        <table class="stripe hover" id="cus-table">
+          <thead class="font-weight-bold momo-weight-color colorControl">
+            <tr>
+              <th>分類</th>
+              <th>月份</th>
+              <th>內容</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody class="font-weight-bold">
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>12月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">演唱【3-B Jr. LIVE『年末だヨ！全員集合』】</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．原宿アストロホール</p>
+                <p class="table-content-sub text-info">會場限定合輯【3-B Jr.迷你專輯（3-B Jr.ぷちアルバム）】販售，另外【Rough Style（ラフスタイル）】【MILKY WAY】【朝向那片天際（あの空へ向かって）】3曲由【music.jp】同年先行配信</p>
+                <p>確認伊倉愛美、和川ミユウ（和川未優）、藤白すみれ桃色幸運草離隊</p>
+                <p class="table-content-sub text-info">2009年5月17日桃色幸運草1週年【3-B Jr.LIVE 年末だヨ！全員集合 ～STARDUST section three 3-B Jr.LIVE～ 前編】【3-B Jr.LIVE 年末だヨ！全員集合 ～STARDUST section three 3-B Jr.LIVE～ 後編】DVD發行</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://garymomo2008.github.io/music?item=a1" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                  <a href="https://ameblo.jp/schoolgirls/entry-10185179217.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>12月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">街頭演唱</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．飯田橋ラムラ</p>
+              </td>
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>12月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">演唱【中島愛クリスマスイベント 2008】，含【ニコニコ生放送】直播</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．渋谷club asia</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://natalie.mu/music/news/11493" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                  <a href="https://ameblo.jp/schoolgirls/entry-10182481776.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>書報</p></td>
+              <td><p>12月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【UTB vol.189】，內含桃色幸運草介紹</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.wani.co.jp/event.php?id=322" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>12月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">演唱【B.L.T.PRESENTS Girls Woodstock Vol.7】</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．渋谷eggman</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="http://finoliafactory.com/blt/081213.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+                <p>宣傳</p>
+                <p>
+                  <a href="https://youtu.be/YaYP_3cSyqw" target="_blank" class="btn btn-outline-danger btn-sm" role="button" title="YouTube">YT&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>音樂</p></td>
+              <td><p>12月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">當時成員百田夏菜子、玉井詩織、高城蕾妮、伊倉愛美、和川ミユウ（和川未優）與早見朱莉一起參與團體【バーボンズ】單曲【雪国】MV演出</p>
+              </td>
+              <td>
+                <p>MV</p>
+                <p>
+                  <a href="https://youtu.be/iN6y18sasBc" target="_blank" class="btn btn-outline-danger btn-sm" role="button" title="YouTube">YT&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>廣告</p></td>
+              <td><p>12月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">佐佐木彩夏參與【KONAMI】合作【任天堂DS】遊戲【極上！！めちゃモテ委員長】廣告演出</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.nintendo.co.jp/ds/software/ce4j/index.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>書報</p></td>
+              <td><p>12月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【ちゃお 1月号】，內含佐佐木彩夏介紹</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.amazon.co.jp/dp/B001HSR8AY/" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>書報</p></td>
+              <td><p>11月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【BUBKA 1月号】，內含桃色幸運草介紹</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.amazon.co.jp/dp/B001LMYYKS/" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>11月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">街頭演唱，以及早見朱莉、佐佐木彩夏、柏幸奈的新加入</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．飯田橋ラムラ</p>
+                <p>早見朱莉與柏幸奈先以覆面方式登場，最後佐佐木彩夏以虎面登場</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ameblo.jp/schoolgirls/entry-10170693454.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>事件</p></td>
+              <td><p>11月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">桃色幸運草隊長交接：高城蕾妮 → 百田夏菜子</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ja.wikipedia.org/wiki/%E9%AB%98%E5%9F%8E%E3%82%8C%E3%81%AB" target="_blank" class="btn btn-outline-momo-color btn-sm colorControl" role="button" title="Wiki">Wiki&nbsp;&#9752;</a>
+                  <a href="https://ja.wikipedia.org/wiki/%E7%99%BE%E7%94%B0%E5%A4%8F%E8%8F%9C%E5%AD%90" target="_blank" class="btn btn-outline-momo-color btn-sm colorControl" role="button" title="Wiki">Wiki&nbsp;&#9752;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>11月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">演唱【B.L.T.PRESENTS Girls Woodstock Vol.6】</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．渋谷eggman</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="http://finoliafactory.com/blt/081108.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>事件</p></td>
+              <td><p>11月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">有安杏果加入星塵傳播</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ja.wikipedia.org/wiki/%E6%9C%89%E5%AE%89%E6%9D%8F%E6%9E%9C" target="_blank" class="btn btn-outline-momo-color btn-sm colorControl" role="button" title="Wiki">Wiki&nbsp;&#9752;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>廣告</p></td>
+              <td><p>10月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">伊倉愛美與藤白すみれ參與【syn Sophia】合作【任天堂DS】遊戲【わがままファッション ガールズモード】廣告演出</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.nintendo.co.jp/ds/azlj/index.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>音樂</p></td>
+              <td><p>10月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">百田夏菜子參與樂團【ORESKABAND】單曲【君ストライプ】MV演出</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ja.wikipedia.org/wiki/ORESKABAND" target="_blank" class="btn btn-outline-dark btn-sm" role="button" title="Wiki">Wiki&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>10月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">演唱【B.L.T.PRESENTS Girls Woodstock Vol.5】，早見朱莉與柏幸奈額外一起參與</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．新宿MARZ</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="http://finoliafactory.com/blt/081018.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>音樂</p></td>
+              <td><p>10月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">伊倉愛美參與【及川光博】單曲【GO AHEAD！！】MV演出</p>
+              </td>
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td><p>音樂</p></td>
+              <td><p>10月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">當時成員百田夏菜子、玉井詩織、高城蕾妮、伊倉愛美、和川ミユウ（和川未優）與早見朱莉一起參與團體【バーボンズ】單曲【autumn】MV演出</p>
+              </td>
+              <td>
+                <p>MV</p>
+                <p>
+                  <a href="https://youtu.be/EhnfcKx6BJM" target="_blank" class="btn btn-outline-danger btn-sm" role="button" title="YouTube">YT&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>10月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">街頭演唱，早見朱莉額外一起參與</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．代々木公園，之後轉移至東京．飯田橋ラムラ</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ameblo.jp/schoolgirls/entry-10153850749.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>書報</p></td>
+              <td><p>09月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【Girls！Vol.26】，內含百田夏菜子與早見朱莉介紹</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.amazon.co.jp/dp/4575450294" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>網路</p></td>
+              <td><p>09月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【OCN 電脳サブカルマガジンOG 第26号】，內含百田夏菜子介紹</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://web.archive.org/web/20081004214400/http://www.ocn.ne.jp/game/og/26-yanki/index.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>書報</p></td>
+              <td><p>09月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【B.L.T. 11月号】，內含桃色幸運草介紹</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.fujisan.co.jp/product/2173/b/211758/" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>音樂</p></td>
+              <td><p>09月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">和川ミユウ（和川未優）參與樂團【遊吟】單曲【あの日の2人のように】MV演出</p>
+              </td>
+              <td>
+                <p>MV</p>
+                <p>
+                  <a href="https://youtu.be/wl0g0dOA_I4" target="_blank" class="btn btn-outline-danger btn-sm" role="button" title="YouTube">YT&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>09月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">演唱【アキ☆スタオーディション '08 AUTUMN@SHIBUYA】，早見朱莉額外一起參與</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．渋谷パルコ</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ameblo.jp/schoolgirls/entry-10140474680.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>09月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">演唱【B.L.T.PRESENTS Girls Woodstock Vol.4】</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．竹芝BLACKroom</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="http://finoliafactory.com/blt/080913.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>09月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">街頭演唱，早見朱莉額外一起參與</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．代々木公園</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ameblo.jp/schoolgirls/entry-10135647917.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                  <a href="https://ameblo.jp/schoolgirls/entry-10144020147.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>書報</p></td>
+              <td><p>09月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【ピュアピュア Vol.50】，內含桃色幸運草介紹</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.amazon.co.jp/dp/4777805697" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>08月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">演唱【夏☆スタ！'08 ～STARDUST section three 3-B Jr.LIVE～】</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．原宿アストロホール</p>
+                <p class="table-content-sub text-info">會場限定合輯【3-B Jr.迷你專輯（3-B Jr.ぷちアルバム）】販售，另外【Rough Style（ラフスタイル）】【MILKY WAY】【朝向那片天際（あの空へ向かって）】3曲由【music.jp】同年先行配信</p>
+                <p class="table-content-sub text-info">同年【夏☆スタ！'08 ～STARDUST section three 3-B Jr.LIVE～】DVD發行</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://garymomo2008.github.io/music?item=a1" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                  <a href="https://ameblo.jp/schoolgirls/entry-10134116601.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>書報</p></td>
+              <td><p>08月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【memew Vol.40】，內含玉井詩織介紹</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.hmv.co.jp/artist_Magazine-Book_000000000120251/item_Memew-Vol-40_2765564" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>書報</p></td>
+              <td><p>08月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【B.L.T. 10月号】，內含桃色幸運草介紹</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.fujisan.co.jp/product/2173/b/207927/" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>音樂</p></td>
+              <td><p>08月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">高城蕾妮參與【詩音】單曲【Last Song】MV演出</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ja.wikipedia.org/wiki/%E8%A9%A9%E9%9F%B3_(%E6%AD%8C%E6%89%8B)" target="_blank" class="btn btn-outline-dark btn-sm" role="button" title="Wiki">Wiki&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>08月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">演唱【サマ☆スタオーディション '08 in 浦和パルコ】，另外早見朱莉也一起參與其他相關活動</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：埼玉．浦和パルコ</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.oricon.co.jp/news/57299/full/" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>08月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">演唱【B.L.T.PRESENTS Girls Woodstock Vol.3】</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．渋谷eggman</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="http://finoliafactory.com/blt/080809.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>08月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">街頭演唱</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．代々木公園</p>
+                <p>其中8月9日演唱活動確認高井つき奈桃色幸運草離隊，以及藤白すみれ的新加入</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ameblo.jp/schoolgirls/entry-10125272642.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>書報</p></td>
+              <td><p>07月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【Kindai 9月号】，內含桃色幸運草介紹</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.amazon.co.jp/dp/B07P8B9LYX/" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>戲劇</p></td>
+              <td><p>07月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【TBS「大好き！五つ子 2008」】和川ミユウ（和川未優）參與演出</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ja.wikipedia.org/wiki/%E5%A4%A7%E5%A5%BD%E3%81%8D!%E4%BA%94%E3%81%A4%E5%AD%90" target="_blank" class="btn btn-outline-dark btn-sm" role="button" title="Wiki">Wiki&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>活動</p></td>
+              <td><p>07月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">街頭演唱</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：東京．代々木公園</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ameblo.jp/schoolgirls/entry-10113383169.html" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>書報</p></td>
+              <td><p>06月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【UTB vol.186】，內含桃色幸運草介紹</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.wani.co.jp/event.php?id=133" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>音樂</p></td>
+              <td><p>05月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">由當時成員百田夏菜子與高城蕾妮，以及早見朱莉一起參與樂團【little by little】單曲【Pray】MV演出</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://www.sonymusic.co.jp/artist/littlebylittle/discography/SRCL-6801" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" title="Site">Site&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>音樂</p></td>
+              <td><p>05月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">和川ミユウ（和川未優）參與團體【GReeeeN】單曲【キセキ】MV演出</p>
+              </td>
+              <td>
+                <p>MV</p>
+                <p>
+                  <a href="https://youtu.be/DwTinTO0o9I" target="_blank" class="btn btn-outline-danger btn-sm" role="button" title="YouTube">YT&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>戲劇</p></td>
+              <td><p>05月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【東海テレビ「花衣夢衣」】伊倉愛美參與演出</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ja.wikipedia.org/wiki/%E8%8A%B1%E8%A1%A3%E5%A4%A2%E8%A1%A3#%E7%AC%AC2%E9%83%A8_%E6%98%AD%E5%92%8C41%E5%B9%B4_-_%E6%98%AD%E5%92%8C53%E5%B9%B4" target="_blank" class="btn btn-outline-dark btn-sm" role="button" title="Wiki">Wiki&#10097;&#10097;</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><p>事件</p></td>
+              <td><p>05月</p></td>
+              <td>
+                <p class="table-content-title p-2 mx-2 rounded">【スターダスト芸能3部新人発掘オーディション】5月17日桃色幸運草誕生，包含最初期成員高城蕾妮、伊倉愛美、和川ミユウ（和川未優）、高井つき奈與後來加入的百田夏菜子和玉井詩織，並演唱了【朝向那片天際（あの空へ向かって）】曲目</p>
+                <hr class="table-content-extra-line-ext">
+                <p class="table-content-sub text-muted">地點：神奈川．川崎アゼリア</p>
+                <p>藤白すみれ參加桃色幸運草甄選</p>
+              </td>
+              <td>
+                <p>參考</p>
+                <p>
+                  <a href="https://ja.wikipedia.org/wiki/%E3%82%82%E3%82%82%E3%81%84%E3%82%8D%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%90%E3%83%BCZ" target="_blank" class="btn btn-outline-momo-color btn-sm colorControl" role="button" title="Wiki">Wiki&nbsp;&#9752;</a>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot class="font-weight-bold momo-weight-color colorControl">
+            <tr>
+              <th>分類</th>
+              <th>月份</th>
+              <th>內容</th>
+              <th>備註</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-10 mt-5 text-center text-break">
+        <h6 class="font-weight-bold text-white">
+                  部分資料參考來源
+           <a class="text-decoration-none text-muted" href="http://www.momoclo.net/" target="_blank">『官網』</a>
+                 、
+           <a class="text-decoration-none text-muted" href="http://momoclozamurai.xxxblog.jp" target="_blank">『ももクロ侍』</a>
+                 、
+           <a class="text-decoration-none text-muted" href="http://momoirocloverz.blog.fc2.com/" target="_blank">『ももクロちゃんはじめました。』</a>
+                  、『台灣桃草武士團』
+        </h6>
+      </div>
+    </div>
+    <footer class="mt-auto">
+      <h6 class="text-center font-weight-bold text-white">
+        &nbsp;
+        <br/>桃色幸運草Z台灣武士製作
+        <br/>建議使用Chrome或Edge瀏覽器以達最佳瀏覽效果
+        <br/>本頁圖片來源：<a class="text-decoration-none text-muted" href="https://natalie.mu/" target="_blank">ナタリー</a>與網路搜尋
+      </h6>
+    </footer>
+  </div>
 </body>
 </html>
